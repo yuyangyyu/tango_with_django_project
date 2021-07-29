@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# This could be changed to "rango"
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
