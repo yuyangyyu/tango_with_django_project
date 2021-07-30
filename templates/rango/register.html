@@ -17,10 +17,8 @@ Rango says: <strong>register here!</strong><br />
 
     {% csrf_token %}
 
-    <!-- Display each form -->
     {{ user_form.as_p }}
     {{ profile_form.as_p }}
-    <!-- Provide a button to click to submit the form. -->
     <input type="submit" name="submit" value="Register" />
 </form>
 {% endif %}
