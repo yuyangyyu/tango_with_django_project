@@ -13,10 +13,11 @@
     </head>
     <body>
         <div>
+        <!-- Page specific content goes here -->
         {% block body_block %}
         {% endblock %}
         </div>
-        <hr/>
+        <hr />
         <div>
             <ul>
             {% if user.is_authenticated %}
