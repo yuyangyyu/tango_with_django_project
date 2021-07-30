@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -18,11 +19,13 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!r!r0=$_61n30d@1$+#qs0tlbim0cp_k_4-+w)ph*(irt)aked'
+SECRET_KEY = 'django-insecure-eg10bxc-6)n$1+x1b@42d_p%r4z_)h!y_%8b$gn96wgon0x4e$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -32,7 +35,6 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-# This could be changed to "rango"
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -55,6 +57,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'tango_with_django_project.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -67,7 +70,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.media',
+                'django.template.context_processors.media',  # already here
             ],
         },
     },
@@ -82,7 +85,7 @@ WSGI_APPLICATION = 'tango_with_django_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR / 'db.sqlite3'),
     }
 }
 
@@ -127,8 +130,10 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 STATICFILES_DIRS = [STATIC_DIR, ]

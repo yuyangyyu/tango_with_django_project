@@ -15,33 +15,33 @@ def populate():
 
     python_pages = [
         {'title': 'Official Python Tutorial',
-         'url': 'http://docs.python.org/3/tutorial/',
+         'url':'http://docs.python.org/3/tutorial/',
          'views': 2},
-        {'title': 'How to Think like a Computer Scientist',
-         'url': 'http://www.greenteapress.com/thinkpython/',
+        {'title':'How to Think like a Computer Scientist',
+         'url':'http://www.greenteapress.com/thinkpython/',
          'views': 4},
-        {'title': 'Learn Python in 10 Minutes',
-         'url': 'http://www.korokithakis.net/tutorials/python/',
-         'views': 8}]
+        {'title':'Learn Python in 10 Minutes',
+         'url':'http://www.korokithakis.net/tutorials/python/',
+         'views': 8} ]
 
     django_pages = [
-        {'title': 'Official Django Tutorial',
-         'url': 'https://docs.djangoproject.com/en/2.1/intro/tutorial01/',
+        {'title':'Official Django Tutorial',
+         'url':'https://docs.djangoproject.com/en/2.1/intro/tutorial01/',
          'views': 16},
-        {'title': 'Django Rocks',
-         'url': 'http://www.djangorocks.com/',
+        {'title':'Django Rocks',
+         'url':'http://www.djangorocks.com/',
          'views': 32},
-        {'title': 'How to Tango with Django',
-         'url': 'http://www.tangowithdjango.com/',
-         'views': 64}]
+        {'title':'How to Tango with Django',
+         'url':'http://www.tangowithdjango.com/',
+         'views': 64} ]
 
     other_pages = [
-        {'title': 'Bottle',
-         'url': 'http://bottlepy.org/docs/dev/',
+        {'title':'Bottle',
+         'url':'http://bottlepy.org/docs/dev/',
          'views': 128},
-        {'title': 'Flask',
-         'url': 'http://flask.pocoo.org',
-         'views': 256}]
+        {'title':'Flask',
+         'url':'http://flask.pocoo.org',
+         'views': 256} ]
 
     cats = {'Python': {'pages': python_pages, 'views': 128, 'likes': 64},
             'Django': {'pages': django_pages, 'views': 64, 'likes': 32},
@@ -76,7 +76,6 @@ def add_cat(name, views=0, likes=0):
     c.save()
     return c
 
-#Startexecutionhere!
 if __name__ == '__main__':
     print('Starting Rango population script...')
     populate()
